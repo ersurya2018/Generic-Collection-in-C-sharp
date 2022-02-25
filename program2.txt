@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Emp
+    {
+        public void showdata<T>(T [] arr)
+        {
+        foreach(T value in arr)
+            {
+                Console.WriteLine(value);
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] data = new int[4];
+            data[0] = 19;
+            data[1] = 23;
+            data[2] = 24;
+            data[3] = 26;
+            //data[4] = 26;
+            Emp obj1 = new Emp();
+            obj1.showdata(data);
+
+            string[] data1 = new string[2];
+            data1[0] = "data1";
+            data1[1] = "data2";
+            Emp obj2 = new Emp();
+            obj2.showdata(data1);
+
+            Console.ReadKey();
+        }
+    }
+}

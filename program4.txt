@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Emp<T>
+    {
+        T x;
+        T y;
+
+        public Emp(T x, T y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+        public void showdata()
+        {
+            Console.WriteLine("A {0} B {1}", x, y);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Emp<int> obj = new Emp<int>(23,34);
+            obj.showdata();
+            Console.WriteLine("Enter two string");
+            string a=Console.ReadLine();
+            string b=Console.ReadLine();
+            Emp<string> obj1= new Emp<string>(a, b);
+            obj1.showdata();
+            Console.WriteLine("Enter two string");
+            double e = double.Parse(Console.ReadLine());
+            double c = double.Parse(Console.ReadLine());
+            Emp<double> obj2 = new Emp<double>(e, c);
+            obj2.showdata();
+            Console.ReadKey();
+        }
+    }
+}

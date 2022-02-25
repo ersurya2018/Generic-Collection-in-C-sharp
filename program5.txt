@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    
+    class Emp
+    {
+        public bool check<T>(T a, T b)
+        {
+            bool res= a.Equals(b);
+            return res;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Emp obj = new Emp();
+            Console.WriteLine(obj.check<int>(12,23));
+            Emp obj1 = new Emp();
+            Console.WriteLine(obj1.check<string>("coder", "coder"));
+            Console.ReadKey();
+        }
+    }
+}
