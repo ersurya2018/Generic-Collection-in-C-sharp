@@ -1,0 +1,91 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*List<int> data = new List<int>();
+            data.Add(12);
+            data.Add(13);
+            data.Add(14);
+            data.Add(15);
+            data.Add(16);
+            /*
+            foreach(int value in data)
+            {
+                Console.WriteLine(value);
+            }*/
+
+            /*data.Remove(16);
+            foreach (int value in data)
+            {
+                Console.WriteLine(value);
+            }*/
+
+
+            /*data.RemoveAt(3);
+            foreach (int value in data)
+            {
+                Console.WriteLine(value);
+            }
+            if(data.Contains(12))
+            {
+                Console.WriteLine("Exist data");
+            }
+            else
+            {
+                Console.WriteLine("Exist not data");
+            }
+            
+            foreach (int value in data)
+            {
+                Console.WriteLine(value);
+            }*/
+            List<int> data = new List<int>();
+            data.Add(20);
+            data.Add(25);
+            data.Add(26);
+            data.Add(27);
+            /*foreach(int a in data)
+            {
+                Console.WriteLine(a);
+            }
+            data.Remove(27);
+            foreach (int a in data)
+            {
+                Console.WriteLine(a);
+            }
+
+            data.RemoveAt(1);
+            foreach (int a in data)
+            {
+                Console.WriteLine(a);
+            }*/
+
+            List<string> data1 = new List<string>();
+            data1.Add("coder");
+            data1.Add("world");
+            data1.Add("coder1");
+            data1.Add("world");
+            data1.Add("surya");
+            data1.Add("bhadohi");
+            /*foreach (string a in data1)
+            {
+                Console.WriteLine(a);
+            }*/
+            //here remove method remove world starting index
+            data1.Remove("world");
+            foreach (string a in data1)
+            {
+                Console.WriteLine(a);
+            }
+            Console.ReadKey();
+        }
+    }
+}
