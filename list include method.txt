@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Employee1
+{
+    //main class 
+    class Program
+    {
+        //thi is user define method not return type.
+        static void mylist<T>(List<T>data)
+        {
+            foreach(T g in data)
+            {
+                Console.WriteLine(g);
+            }
+
+        }
+        //pre define method its called main method.
+        static void Main(string[] args)
+        {
+            //insert list elemets in generic collection.  
+            List<int> data1 = new List<int>();
+            data1.Add(20);
+            data1.Add(30);
+            data1.Add(60);
+            data1.Add(50);
+            data1.Add(45);
+            //calling key. 
+            Program.mylist(data1);
+            Console.ReadKey();
+
+
+        }
+    }
+}
