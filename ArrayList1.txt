@@ -1,0 +1,21 @@
+using System;
+using System.Collections;
+namespace coder
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ArrayList obj = new ArrayList()
+            {
+            10,"mohan",20,
+            "hello",
+            30
+            };
+            foreach(var values in obj)
+            {
+                Console.WriteLine(values);
+            }
+        }
+    }
+}

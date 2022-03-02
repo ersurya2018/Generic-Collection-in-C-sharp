@@ -1,0 +1,75 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+namespace coder
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var animal = new Dictionary<int, string>()
+            {
+                {0,"cow" },
+                {1,"fox" },
+                { 2,"lion"}
+            };
+            animal.Add(3, "pig");
+
+            foreach (KeyValuePair<int, string> kvp in animal)
+            {
+                Console.WriteLine("key : {0} value : {1}", kvp.Key, kvp.Value);
+            }
+            Console.WriteLine("=====================================");
+            Dictionary<int,string> animal1 = new Dictionary<int, string>()
+            {
+                {0,"cow" },
+                {1,"fox" },
+                { 2,"lion"}
+            };
+            animal1.Add(3, "pig");
+
+            foreach (KeyValuePair<int, string> kvp in animal1)
+            {
+                Console.WriteLine("key : {0} value : {1}", kvp.Key, kvp.Value);
+            }
+
+
+            Console.WriteLine("===============Here update dictionary====");
+            Dictionary<int, string> animal2 = new Dictionary<int, string>()
+            {
+                {0,"cow" },
+                {1,"fox" },
+                { 2,"lion"}
+            };
+            animal2.Add(3, "pig");
+
+
+            animal2[3] = "elephent, mohan, sohan";
+
+            foreach (KeyValuePair<int, string> kvp in animal2)
+            {
+                Console.WriteLine("key : {0} value : {1}", kvp.Key, kvp.Value);
+            }
+
+
+            Console.WriteLine("===============Here Remove Element from dictionary====");
+            Dictionary<int, string> animal3 = new Dictionary<int, string>()
+            {
+                {0,"cow" },
+                {1,"fox" },
+                { 2,"lion"}
+            };
+            animal3.Add(3, "pig");
+
+
+            animal3[3] = "elephent, mohan, sohan";
+
+            animal3.Remove(2);
+
+            foreach (KeyValuePair<int, string> kvp in animal3)
+            {
+                Console.WriteLine("key : {0} value : {1}", kvp.Key, kvp.Value);
+            }
+        }
+    }
+}

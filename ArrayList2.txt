@@ -1,0 +1,28 @@
+using System;
+using System.Collections;
+namespace coder
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ArrayList arList = new ArrayList()
+                {
+                    1,
+                    "Bill",
+                    300,
+                    4.5f,
+                    300
+                };
+
+            Console.WriteLine(arList.Contains(300)); // true
+            Console.WriteLine(arList.Contains("Bill")); // true
+            Console.WriteLine(arList.Contains(10)); // false
+            Console.WriteLine(arList.Contains("Steve")); // false
+            /*foreach (var values in obj)
+            {
+                Console.WriteLine(values);
+            }*/
+        }
+    }
+}

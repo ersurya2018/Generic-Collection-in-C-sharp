@@ -1,0 +1,32 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+namespace coder
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<int, string> data = new Dictionary<int, string>();
+            data.Add(1, "One"); //adding a key/value using the Add() method
+            data.Add(2, "Two");
+            data.Add(3, "Three");
+
+            //The following throws run-time exception: key already added.
+            //numberNames.Add(3, "Three"); 
+
+            foreach (var kvp in data)
+                Console.WriteLine("Key: {0}, Value: {1}", kvp.Key, kvp.Value);
+
+            //creating a dictionary using collection-initializer syntax
+            var cities = new Dictionary<string, string>(){
+                    {"UK", "London, Manchester, Birmingham"},
+                    {"USA", "Chicago, New York, Washington"},
+                    {"India", "Mumbai, New Delhi, Pune"}
+};
+
+            foreach (var kvp in cities)
+                Console.WriteLine("Key: {0}, Value: {1}", kvp.Key, kvp.Value);
+        }
+    }
+}
